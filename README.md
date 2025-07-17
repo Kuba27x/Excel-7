@@ -1,93 +1,154 @@
-Excel-7
+# 📅 Excel-7
 
-Project Description
+![Status](https://img.shields.io/badge/status-active-brightgreen.svg)
+![Excel](https://img.shields.io/badge/Microsoft-Excel-blue.svg)
 
-Excel-7 is a guide to working with dates and time in Excel. Here you'll find practical tips, instructions, and illustrations about useful functions.
+## ✨ Project Description
 
-Table of Contents 
+**Excel-7** is a guide to working with dates and time in Microsoft Excel. Here you'll find practical tips, instructions, and illustrations about useful functions.
 
-Date
+> 📚 **Goal:** Help you master Excel's date and time functions for everyday use—whether you're a beginner or advanced user!
 
-To enter a date in Excel, use the "/" or "-" characters. To enter a time, use the ":" (colon). You can also enter a date and a time in one cell.
-(Note: here I am using polish date format: day.month.year)
+---
 
-To extract the year of a date, use the YEAR function.
+## 📚 Table of Contents
 
-![screenshot](Screenshots/Date.png)
+- [Date Functions](#-date-functions)
+- [Current Date and Time](#-current-date-and-time)
+- [DATEDIF and Days Calculation](#-datedif-and-days-calculation)
+- [Calculate Age](#-calculate-age)
+- [WEEKDAY and Day Names](#-weekday-and-day-names)
+- [NETWORKDAYS and Workdays](#-networkdays-and-workdays)
+- [Quarter Calculation](#-quarter-calculation)
+- [Screenshots](#-screenshots)
+- [Requirements](#-requirements)
+- [Author](#-author)
 
-(Note: use MONTH and DAY function to extract month and day)
+---
 
-To add a number of years, months and/or days, use the DATE function.
+## 📆 Date Functions
 
-![screenshot](Screenshots/ChangeDate.png)
+To enter a date in Excel, use the "/" or "-" characters. To enter a time, use ":" (colon). You can also enter a date and a time in one cell.
+
+> ℹ️ Note: Polish date format used here: day.month.year
+
+To extract the year of a date, use the `YEAR` function.
+
+![Date](Screenshots/Date.png)
+
+> 💡 Tip: Use `MONTH` and `DAY` functions to extract month and day.
+
+To add a number of years, months, and/or days, use the `DATE` function.
+
+![Change Date](Screenshots/ChangeDate.png)
 
 If you only need to add days you can do it like this:
 
-![screenshot](Screenshots/AddDays.png)
+![Add Days](Screenshots/AddDays.png)
 
-Current date and time
+---
 
-To get the current date and time, use the NOW function.
+## ⏰ Current Date and Time
 
-![screenshot](Screenshots/CurrentDateAndTime.png)
+To get the current date and time, use the `NOW` function.
 
-(Note: use the TODAY function to enter today's date in Excel.)
-(Note: Result of NOW function will update automatically whenever the sheet is recalculated. )
+![Current Date and Time](Screenshots/CurrentDateAndTime.png)
 
-To extract hour from date use the HOUR function.
+> ℹ️ Note: Use the `TODAY` function to enter today's date in Excel.  
+> ℹ️ The result of the `NOW` function updates automatically whenever the sheet is recalculated.
 
-![screenshot](Screenshots/Hour.png)
+To extract hour from date use the `HOUR` function.
 
-(Note: use the MINUTE function and the SECOND function to return the minute and second.)
+![Hour](Screenshots/Hour.png)
 
-To add a number of hours, minutes and/or seconds, use the TIME function.
+> 💡 Tip: Use the `MINUTE` and `SECOND` functions to return minute and second.
 
-![screenshot](Screenshots/ChangeTime.png)
+To add a number of hours, minutes, and/or seconds, use the `TIME` function.
 
-DATEDIF
+![Change Time](Screenshots/ChangeTime.png)
 
-The DATEDIF function in Excel calculates the number of days, months or years between two dates. The DATEDIF function has 3 arguments.
+---
 
-![screenshot](Screenshots/DateDif.png)
+## 📏 DATEDIF and Days Calculation
 
-(Note: type "d" for the third argument to get the number of days between two dates, "m" to get the number of months between two dates, "y" to get the number of years between two dates, "yd" to ignore years and get the number of days between two dates, "md" to ignore months and get the number of days between two dates, "ym" to ignore years and get the number of months between two dates.)
+The `DATEDIF` function in Excel calculates the number of days, months, or years between two dates. It has 3 arguments.
 
-You can also use DAYS function to achieve the same result:
+![DATEDIF](Screenshots/DateDif.png)
 
-![screenshot](Screenshots/Days.png)
+> ℹ️ Note:  
+> - Type `"d"` for the third argument to get days between two dates  
+> - `"m"` for months  
+> - `"y"` for years  
+> - `"yd"` to ignore years  
+> - `"md"` to ignore months and years
 
-Calculate age 
+You can also use the `DAYS` function to achieve the same result:
 
-We can use DATEDIF to calculate the age of a person:
+![DAYS](Screenshots/Days.png)
 
-![screenshot](Screenshots/Age.png)
+---
 
-Use this formula to calculate the exact age: 
+## 🎂 Calculate Age
 
-![screenshot](Screenshots/ExactAge.png)
+We can use `DATEDIF` to calculate the age of a person:
 
-WEEKDAY
+![Age](Screenshots/Age.png)
 
-The WEEKDAY function in Excel returns a number from 1 (Sunday) to 7 (Saturday) representing the day of the week of a date.
+Use this formula to calculate the exact age:
 
-![screenshot](Screenshots/Weekday.png)
+![Exact Age](Screenshots/ExactAge.png)
 
-We can use the TEXT function with "dddd" format to display that day
+---
 
-![screenshot](Screenshots/Text.png)
+## 📅 WEEKDAY and Day Names
 
-(Note: sobota means Saturday in polish)
+The `WEEKDAY` function in Excel returns a number from 1 (Sunday) to 7 (Saturday) representing the day of the week of a date.
 
-NETWORKDAYS
+![Weekday](Screenshots/Weekday.png)
 
-The NETWORKDAYS function in Excel returns the number of workdays between two dates. NETWORKDAYS excludes weekends (Saturday and Sunday).
+We can use the `TEXT` function with `"dddd"` format to display that day:
 
-![screenshot](Screenshots/NetWorkDays.png)
+![Text](Screenshots/Text.png)
+
+> ℹ️ Note: "sobota" means Saturday in Polish.
+
+---
+
+## 🏢 NETWORKDAYS and Workdays
+
+The `NETWORKDAYS` function in Excel returns the number of workdays between two dates, excluding weekends (Saturday and Sunday).
+
+![NetWorkDays](Screenshots/NetWorkDays.png)
+
+---
+
+## 🗓️ Quarter Calculation
 
 Formula that returns the quarter for a given date:
 
-![screenshot](Screenshots/RoundUp.png)
+![RoundUp](Screenshots/RoundUp.png)
 
-(Note: there's no built-in function in Excel that can do this)
-(Note: ROUNDUP(x,0) always rounds x up to the nearest integer)
+> ℹ️ Note: There's no built-in function in Excel to do this.  
+> ℹ️ `ROUNDUP(x,0)` always rounds x up to the nearest integer.
 
+---
+
+## 📸 Screenshots
+
+You can find all screenshots in the `/Screenshots` folder.
+
+---
+
+## ℹ️ Requirements
+
+- Microsoft Excel (recommended: 2021/365 for modern functions)
+- Windows OS
+
+---
+
+## 👨‍💻 Author
+
+Project and documentation by **Kuba27x**  
+Repository: [Kuba27x/Excel-7](https://github.com/Kuba27x/Excel-7)
+
+---
