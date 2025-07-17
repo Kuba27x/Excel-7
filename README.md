@@ -82,11 +82,11 @@ NETWORKDAYS
 
 The NETWORKDAYS function in Excel returns the number of workdays between two dates. NETWORKDAYS excludes weekends (Saturday and Sunday).
 
-![screenshot](Screenshot/NetWorkDays.png)
+![screenshot](Screenshots/NetWorkDays.png)
 
 Formula that returns the quarter for a given date:
 
-![screenshot](Screenshot/RoundUp.png)
+![screenshot](Screenshots/RoundUp.png)
 
 (Note: there's no built-in function in Excel that can do this)
 (Note: ROUNDUP(x,0) always rounds x up to the nearest integer)
